@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Template Literals Example</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 50px;
+        }
+        input, button {
+            padding: 10px;
+            font-size: 16px;
+            margin: 5px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Template Literals Example</h1>
+    <input type="text" id="nameInput" placeholder="Enter your name">
+    <button onclick="showMessage()">Show Message</button>
+
+    <p id="result"></p>
+
+    <script>
+        function showMessage() {
+            let name = document.getElementById("nameInput").value;
+
+            // Using template literal
+            let msg = `Hello ${name}, welcome!`;
+
+            document.getElementById("result").textContent = msg;
+        }
+    </script>
+
+</body>
+</html>
