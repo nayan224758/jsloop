@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Arrow Function Example</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 50px;
+        }
+        input, button {
+            padding: 10px;
+            font-size: 16px;
+            margin: 5px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Arrow Function Greeting</h1>
+    <input type="text" id="nameInput" placeholder="Enter your name">
+    <button onclick="showGreeting()">Greet</button>
+
+    <p id="result"></p>
+
+    <script>
+        // Arrow function version
+        const greet = name => `Hello, ${name}`;
+
+        function showGreeting() {
+            let name = document.getElementById("nameInput").value;
+            document.getElementById("result").textContent = greet(name);
+        }
+    </script>
+
+</body>
+</html>
