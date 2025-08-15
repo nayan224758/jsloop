@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Merge Arrays with Spread Operator</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 50px;
+        }
+        input, button {
+            padding: 10px;
+            font-size: 16px;
+            margin: 5px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Merge Two Arrays</h1>
+    <input type="text" id="arrayA" placeholder="Enter first array (e.g. 1,2)">
+    <input type="text" id="arrayB" placeholder="Enter second array (e.g. 3,4)">
+    <button onclick="mergeArrays()">Merge</button>
+
+    <p id="result"></p>
+
+    <script>
+        function mergeArrays() {
+            let arrA = document.getElementById("arrayA").value.split(",").map(Number);
+            let arrB = document.getElementById("arrayB").value.split(",").map(Number);
+
+            let merged = [...arrA, ...arrB];
+
+            document.getElementById("result").textContent = `Merged Array: [${merged}]`;
+        }
+    </script>
+
+</body>
+</html>
