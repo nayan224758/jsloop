@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>String Reverser</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 50px;
+        }
+        input, button {
+            padding: 10px;
+            font-size: 16px;
+            margin: 5px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>String Reverser</h1>
+    <input type="text" id="stringInput" placeholder="Enter a string">
+    <button onclick="reverseString()">Reverse</button>
+
+    <p id="result"></p>
+
+    <script>
+        function reverseString() {
+            let str = document.getElementById("stringInput").value;
+            let reversed = str.split("").reverse().join("");
+            
+            if (str === "") {
+                document.getElementById("result").textContent = "Please enter a string!";
+            } else {
+                document.getElementById("result").textContent = `Reversed: ${reversed}`;
+            }
+        }
+    </script>
+
+</body>
+</html>
